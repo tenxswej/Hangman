@@ -1,0 +1,285 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+.title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-inline: 50px;
+}
+
+.illustration-section {
+  margin: 0 auto;
+  margin-block: 30px;
+  width: 50%;
+}
+
+.hangman {
+  position: relative;
+  min-height: 400px;
+  max-width: 280px;
+  padding: 10px;
+  display: block;
+}
+.hangman::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  display: block;
+  opacity: 0.3;
+  filter: blur(70px);
+  border-radius: 100%;
+}
+
+.base {
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.pole {
+  width: 10px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.bar {
+  width: 10px;
+  height: 220px;
+  background-color: #ffff;
+  position: absolute;
+  transform-origin: top;
+  rotate: -90deg;
+  top: 20px;
+  left: 0;
+}
+.hang {
+  width: 10px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 200px;
+}
+
+.head {
+  width: 100px;
+  height: 100px;
+  border: solid 4px #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 57px;
+  right: 40px;
+}
+
+.body {
+  position: absolute;
+  top: 165px;
+  right: 92px;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+}
+.right-hand {
+  position: absolute;
+  left: 205px;
+  top: 165px;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: top;
+  rotate: -45deg;
+}
+
+.left-hand {
+  position: absolute;
+  left: 205px;
+  top: 165px;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: top;
+  rotate: 45deg;
+}
+
+.right-leg {
+  position: absolute;
+  left: 205px;
+  top: 265px;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: top;
+  rotate: 45deg;
+}
+
+.left-leg {
+  position: absolute;
+  left: 205px;
+  top: 265px;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: top;
+  rotate: -45deg;
+}
+
+.hangman {
+  position: relative;
+  margin: auto;
+}
+
+.guess-container {
+  margin-block: 50px;
+  font-weight: lighter;
+}
+.guess-the-word {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-align: start;
+}
+.time {
+  margin-block: 50px auto;
+  width: 100%;
+  font-weight: bold;
+  color: red;
+  display: flex;
+  justify-content: center;
+  appearance: none;
+  gap: 10px;
+}
+.words {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.word {
+  position: relative;
+  display: inline;
+  text-align: center;
+  visibility: hidden;
+}
+
+.word-show {
+  visibility: visible;
+}
+
+.word-container {
+  position: relative;
+}
+
+.word-base {
+  position: absolute;
+  bottom: -8px;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.keyboard-section {
+  width: 100%;
+}
+
+.keyboard {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.key {
+  background-color: aliceblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  color: #333;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 100ms;
+}
+.key:focus {
+  transform: scale(0.9);
+  background-color: #333;
+  color: #fff;
+}
+.pressed {
+  background-color: #333;
+  color: #fff;
+}
+.start-button-container {
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-button {
+  padding-inline: 30px;
+  padding-block: 15px;
+  border-bottom: solid 4px #ffffff36;
+  border-right: solid 4px #ffffff4d;
+  border-radius: 20px;
+  transition-property: border;
+  transition-duration: 500ms;
+  margin-inline: 20px;
+}
+
+.start-button:hover {
+  border-bottom: solid 1px #fff;
+  border-right: solid 1px #fff;
+}
+
+@media (width < 1280px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
